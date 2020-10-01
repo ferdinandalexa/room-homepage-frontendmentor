@@ -30,7 +30,10 @@
     </header>
     <div id="root-layout">
         <section id="slider" class="Slider">
-            <img src="/public/images/desktop-image-hero-1.jpg" class="Slider__Cover" alt="Diseño de muebles de mesa">
+            <picture class="Slider__Cover">
+                <source id="slider__picture" media="(max-width: 820px)" srcset="public/images/mobile-image-hero-1.jpg">
+                <img src="/public/images/desktop-image-hero-1.jpg" id="slider__cover" class="Slider__Cover" alt="Diseño de muebles de mesa">
+            </picture>
             <div class="Slider__Description">
                 <div class="Slider__Container">
                     <h2 class="Slider__Title">Discover innovative ways to decorate</h2>
@@ -44,10 +47,10 @@
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="Slider__Actions">
-                <button id="prev"><svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg></button>
-                <button id="next"><svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg></button>
+                <div class="Slider__Actions">
+                    <button id="prev"><svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg></button>
+                    <button id="next"><svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg></button>
+                </div>
             </div>
         </section>
         <section id="about" class="About">
