@@ -33,6 +33,7 @@
 .Header{
     margin: 40px 0 0 60px;
     position: fixed;
+    z-index: 1;
 }
 
 .Header svg{
