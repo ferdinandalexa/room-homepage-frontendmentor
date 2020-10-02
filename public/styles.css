@@ -174,14 +174,6 @@
     grid-column: -3 / -1;
 }
 
-@supports(grid-template-columns: subgrid) and (grid-template-rows: subgrid) {
-    #root-layout>* {
-        display: grid;
-        grid-template-columns: subgrid;
-        grid-template-rows: subgrid;
-    }
-}
-
 @media (max-width: 1200px) {
     .Slider__Description {
         padding: 0 60px;
@@ -252,6 +244,15 @@
 
     #menu ~ .Navigation{
         display: none;
+        align-items: center;
+        background-color: white;
+        height: 100px;
+        justify-content: flex-end;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        font-size: .8rem;
     }
 
     #menu ~ label{
@@ -268,16 +269,7 @@
     }
     
     #menu:checked ~ .Navigation{
-        align-items: center;
-        background-color: white;
         display: inline-flex;
-        height: 100px;
-        justify-content: flex-end;
-        left: 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        font-size: .8rem;
     }
 
     .Navigation ul{
@@ -295,5 +287,13 @@
     
     .Navigation a:hover, .Navigation a:active{
         font-weight: 600;
+    }
+}
+
+@supports(grid-template-columns: subgrid) and (grid-template-rows: subgrid) {
+    #root-layout>* {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
     }
 }
