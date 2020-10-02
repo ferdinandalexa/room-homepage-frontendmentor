@@ -29,6 +29,10 @@
     display: none;
 }
 
+#menu ~ label{
+    display: none;
+}
+
 .Header {
     margin: 40px 0 0 60px;
     position: absolute;
@@ -201,6 +205,11 @@
     .Header a {
         justify-self: center;
     }
+
+    #slider.Slider{
+        grid-template-columns: 1fr
+    }
+
     .Slider__Cover {
         grid-column: initial;
         object-fit: cover;
@@ -228,10 +237,11 @@
         width: 50%;
     }
 
-    #about.About {
+    #about {
         display: flex;
         flex-direction: column-reverse;
     }
+
     .About > *{
         grid-row: initial;
     }
@@ -242,6 +252,10 @@
 
     #menu ~ .Navigation{
         display: none;
+    }
+
+    #menu ~ label{
+        display: initial;
     }
 
     #menu + label > svg{
@@ -276,7 +290,7 @@
     }
 
     .Navigation a:last-child{
-        padding: 0 5px;
+        padding: 0 10px;
     }
     
     .Navigation a:hover, .Navigation a:active{
