@@ -25,6 +25,10 @@
     grid-template-rows: repeat(2, 1fr);
 }
 
+#menu[type="checkbox"]{
+    display: none;
+}
+
 .Header {
     margin: 40px 0 0 60px;
     position: absolute;
@@ -187,7 +191,15 @@
         grid-template-areas: "slider" "slider" "slider" "slider" "about" "about" "about";
     }
     .Header {
-        margin: 40px 0 0 40px;
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 0 0 20px;
+        position: absolute;
+        width: 55%;
+    }
+    
+    .Header a {
+        justify-self: center;
     }
     .Slider__Cover {
         grid-column: initial;
@@ -226,5 +238,48 @@
 
     .About__Copy{
         padding: 30px 20px;
+    }
+
+    #menu ~ .Navigation{
+        display: none;
+    }
+
+    #menu + label > svg{
+        position: relative;
+        z-index: 2;;
+    }
+    
+    #menu:checked + label > svg{
+        fill: #404040;
+    }
+    
+    #menu:checked ~ .Navigation{
+        align-items: center;
+        background-color: white;
+        display: inline-flex;
+        height: 100px;
+        justify-content: flex-end;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        font-size: .8rem;
+    }
+
+    .Navigation ul{
+        padding: 0;
+    }
+
+    .Navigation a{
+        color: #212121;
+        padding: 0;
+    }
+
+    .Navigation a:last-child{
+        padding: 0 5px;
+    }
+    
+    .Navigation a:hover, .Navigation a:active{
+        font-weight: 600;
     }
 }
